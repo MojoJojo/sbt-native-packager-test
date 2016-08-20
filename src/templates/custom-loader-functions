@@ -1,0 +1,9 @@
+startService() {
+    app_name=$1
+    start $app_name
+}
+
+stopService() {
+    app_name=$1
+    stop $app_name
+}
