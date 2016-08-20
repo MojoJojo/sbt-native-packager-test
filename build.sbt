@@ -10,7 +10,4 @@ packageSummary := "Native packager test project"
 packageDescription := "Native packager test project"
 stopRunlevels :=Option("3")
 rpmVendor:="Sanket Sharma"
-
-      
-      
-      
+serverLoading:= Option(ServerLoader.SystemV)
