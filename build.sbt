@@ -1,7 +1,25 @@
 
-
 disablePlugins(CloudFormation)
- val main = Project("sbt-native-packager-test",base = file("."))
+ lazy val commonSettings = Seq(
+  organization := "com.example",
+  version := "0.1.0",
+  scalaVersion := "2.11.8"
+)
+
+
+
+lazy val core = (project in file("core")).
+  settings(commonSettings: _*).
+  settings(
+    // other settings
+  )
+
+lazy val util = (project in file("util")).
+  settings(commonSettings: _*).
+  settings(
+    // other settings
+  )
+val main = Project("sbt-native-packager-test",base = file("."))
 
 .enablePlugins(JavaServerAppPackaging)
 .enablePlugins(SystemVPlugin)
