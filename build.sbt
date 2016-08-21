@@ -1,5 +1,6 @@
+codedeployBucket in ThisBuild := "omitted for security"
 
-disablePlugins(CloudFormation)
+stackRegion := "US_WEST_2"
  lazy val commonSettings = Seq(
   organization := "com.example",
   version := "0.1.0",
@@ -13,12 +14,14 @@ lazy val core = (project in file("core")).
   settings(
     // other settings
   )
+  .settings(stackRegion := "US_WEST_2")
 
 lazy val util = (project in file("util")).
   settings(commonSettings: _*).
   settings(
     // other settings
   )
+  .settings(stackRegion := "US_WEST_2")
 val main = Project("sbt-native-packager-test",base = file("."))
 
 .enablePlugins(JavaServerAppPackaging)
