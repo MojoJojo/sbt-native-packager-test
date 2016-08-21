@@ -23,7 +23,7 @@ val main = Project("sbt-native-packager-test",base = file("."))
 
 .enablePlugins(JavaServerAppPackaging)
 .enablePlugins(SystemVPlugin)
-.settings(rpmGroup:=Some("Applications/CTILogic"))
+.settings(rpmGroup:=Some("Applications/My Group"))
 .settings(startRunlevels  :=Option("3"))
 .settings(maintainer := "Sanket Sharma")
 .settings(packageSummary := "Native packager test project")
